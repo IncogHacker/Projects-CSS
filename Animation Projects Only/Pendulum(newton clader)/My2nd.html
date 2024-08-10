@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newtoncredle</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background-color: black;
+            display: grid;
+            place-items: center;
+            padding-top: 50px;
+        }
+
+        .cradle {
+
+            width: 500px;
+            height: 20px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            /* justify-content: space-evenly; */
+            gap: 2.7rem;;
+            border-radius: 5px;
+
+
+    
+        }
+
+        div{
+             width:0.4rem;
+             height:300px;
+             background-color: blueviolet;
+             position: relative;
+            
+           
+        }
+
+        .cradle div::before
+        {
+            content:"";
+            width:50px;
+            height:50px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            position: absolute;
+            top:98%;
+            right:-20px;
+            
+
+        }
+
+        .cradle :nth-of-type(1)
+        {
+            animation-name:first;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+            transform-origin:top ;
+            /* animation-direction: alternate; */
+            animation-iteration-count: infinite;
+            
+        }
+
+
+        @keyframes first
+        {
+
+            0%{
+                       transform: rotate(0);
+
+            }
+
+            25%
+            {
+               
+                transform: rotate(30deg);
+            }
+
+            50%
+            {
+                transform: rotate(0deg);
+            }
+
+            100%
+            {
+                transform: rotate(0deg);
+            }
+
+        }
+
+
+        .cradle :nth-of-type(5)
+        {
+            animation-name:last;
+            animation-duration: 2s;
+            /* animation-delay: 1s; */
+            animation-timing-function: linear;
+            transform-origin:top ;
+            animation-iteration-count: infinite;
+        }
+        @keyframes last
+        {
+
+            0%{
+                       transform: rotate(0);
+
+            }
+
+            25%
+            {
+               
+                transform: rotate(-30deg);
+            }
+
+            50%
+            {
+                transform: rotate(0deg);
+            }
+
+            100%
+            {
+                transform: rotate(0deg);
+            }
+
+        }
+
+
+
+    </style>
+    <div class="cradle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

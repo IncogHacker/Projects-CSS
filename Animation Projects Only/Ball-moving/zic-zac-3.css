@@ -1,0 +1,86 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    border: 3px solid red;
+
+}
+
+.Ball{
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  background-color: white;
+
+
+  animation-name: trip;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+
+}
+
+@keyframes trip{
+
+    0%{
+            transform:translateY(-200px);
+
+    }
+
+    10%{
+
+        transform :translateY(80vh);
+    }
+
+    20%{
+
+        transform: translateX(300px) translateY(-5vh);
+        /*starting of vertical height (-5)*/
+    }
+
+    30%
+    {
+        transform: translateY(80vh) translateX(300px) ;
+    }
+
+    40%{
+        transform: translateX(600px) translateY(-5vh);
+        
+    }
+
+    50%{
+        transform: translateY(80vh) translateX(600px);
+
+
+    }
+
+    60%{
+
+        transform: translateX(900px) translateY(-5vh);
+    }
+
+    70%
+    {
+        transform: translateY(80vh) translateX(900px);
+    }
+
+    80%{
+
+        transform: translateX(1200px) translateY(-5vh);
+    }
+     
+    90%
+    {
+        transform: translateY(80vh) translateX(1200px);
+    }
+            
+    /*rest of the 10% percent time me wapas jayega apne original position pe */
+}

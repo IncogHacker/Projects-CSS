@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton Cradle</title>
+</head>
+
+<body>
+    <div class="Main-Stick"></div>
+
+    <div class="grid-container">
+
+        <div class="stick stick-1"></div>
+        <div class="stick stick-2"></div>
+        <div class="stick stick-3"></div>
+        <div class="stick stick-4"></div>
+        <div class="stick stick-5"></div>
+
+    </div>
+
+    <div class="Balls">
+        <div class="Ball Ball-1"></div>
+        <div class="Ball Ball-2"></div>
+        <div class="Ball Ball-3"></div>
+        <div class="Ball Ball-4"></div>
+        <div class="Ball Ball-5"></div>
+
+
+    </div>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+
+        body {
+            /* width:100%; */
+            height: 100vh;
+            background-color: black;
+            display: grid;
+            place-items: center;
+
+        }
+
+        .Main-Stick {
+
+            width: 21.875rem;
+            height: 1.5rem;
+            background-color: blueviolet;
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            width: 21.875rem;
+            display: grid;
+            grid-template-rows: 25rem;
+            grid-template-columns: repeat(5, 0.625rem);
+            /* border: 5px solid blue; */
+            margin-top: -11.875rem;
+
+
+        }
+
+        .stick {
+
+            background-color: blueviolet;
+
+
+        }
+
+        /* --------------------------------------------------------------Animation of Stick */
+        .stick-1 {
+
+            animation-name: stick;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+            transform-origin: top;
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes stick {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                
+                transform: rotate(30deg);
+            }
+
+            50%
+            {
+                transform: rotate(0deg);
+            }
+
+            100%
+            {
+                transform: rotate(0deg);
+            }
+
+        }
+
+        .stick-5 {
+
+            animation-name: stick-5;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: top;
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes stick-5 {
+
+            0% {
+                transform: rotate(0deg);
+               
+            }
+
+            25% {
+               
+                transform: rotate(-30deg);
+            }
+
+
+            50%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(0deg);
+            }
+
+        }
+
+        /* ----------------------------------------------------------------------------------------------------------- */
+
+
+        .Balls {
+            display: flex;
+            margin-top: -20.75rem;
+            /* gap:0.625rem; */
+
+        }
+
+        .Ball {
+            width: 4.125rem;
+            height: 4.125rem;
+            border-radius: 50%;
+            background-color: blueviolet;
+
+
+        }
+
+        /* ----------------------------------------------------------------------------------- */
+        .Ball-1 {
+            animation-name: ballmovement;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes ballmovement {
+
+            0% {
+                transform: translateX(0px);
+
+            }
+
+            25%
+            {
+                transform: translateX(-100px);
+            }
+            50% {
+
+                transform: translateX(0px);
+
+            }
+            100%
+            {
+                transform: translateX(0px);
+            }
+
+
+        }
+
+        .Ball-5 {
+            animation-name: ballmovement-5;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes ballmovement-5 {
+
+            0% {
+                transform: translateX(0px);
+
+            }
+
+            25%
+            {
+                transform: translateX(100px);
+            }
+            50% {
+
+                transform: translateX(0px);
+
+            }
+            100%
+            {
+                transform: translateX(0px);
+            }
+
+
+        }
+    </style>
+</body>
+
+</html>

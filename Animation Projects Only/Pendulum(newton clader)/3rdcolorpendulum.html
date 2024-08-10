@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloured-Pendulum</title>
+</head>
+
+<body>
+
+    <div class="Coloured-Pendulum">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+
+
+        body {
+
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Coloured-Pendulum {
+            width: 40rem;
+            height: 1.5rem;
+            background-color: white;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            border-radius: 10px;
+
+          
+
+        }
+
+
+
+        .Coloured-Pendulum div {
+
+            width: 1rem;
+            height: 450px;
+            background-color: white;
+            border-radius: 5px;
+            position: relative;
+            margin-top:5px ;
+
+            animation-name: moving;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: top;
+            /* animation-direction: alternate; */
+          
+           /* ---------------------------------------------------------------- */
+
+
+        }
+
+
+        
+        @keyframes moving {
+            0% {
+
+                transform: rotate(0deg);
+               
+            }
+
+            25% {
+                transform: rotate(40deg);
+                
+            }
+
+            
+            75%
+            {
+                transform: rotate(-40deg);
+               
+            }
+
+            100%
+            {
+                transform: rotate(0deg);
+               
+            }
+
+        }
+
+
+        .Coloured-Pendulum div::after {
+            
+            position: absolute;
+            top: 98%;
+            right: -18px;
+            content: "";
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 20%;
+            border: 3px solid white;
+
+
+            animation-name: moving-ball;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: top;
+            /* animation-direction: alternate; */
+          
+       
+
+
+        }
+
+
+        
+        @keyframes moving-ball {
+            0% {
+
+                transform: rotate(0deg);
+                background-color: aqua;
+            }
+
+            25% {
+                transform: rotate(40deg);
+                background-color: aqua;
+            }
+
+            
+            75%
+            {
+                transform: rotate(-40deg);
+                background-color: blue;
+            }
+
+            100%
+            {
+                transform: rotate(0deg);
+                background-color: white;
+            }
+
+        }
+        
+    </style>
+</body>
+
+</html>
