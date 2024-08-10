@@ -567,6 +567,57 @@ select{
     }
 }
 
+.Box-two{
 
+    .para{
+        
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: 38px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        
+    }
+
+.container-1
+{
+    padding:0px 0px 10px 10px;
+    display: flex;
+    flex-direction:column;
+    gap:40px;
+    display: grid;
+    grid-template-rows: 116px 116px;
+    grid-template-columns: repeat(2,1fr);
+    width: inherit;
+    height: inherit;
+    position: absolute;
     
+    a{
+        font-size: 0.8rem;
+        text-decoration: none;
+        color:#232F3E;
+        font-weight: bold;
+    }
 
+    .anchor
+    {
+       margin-top: -12px;
+    a
+    {
+       text-decoration: none;
+       color: #007185 ;
+        font-size: 14px;
+       
+    }
+}
+
+}
+
+img{
+    width:130px;
+    height: 116px;
+   
+    
+}
+
+}

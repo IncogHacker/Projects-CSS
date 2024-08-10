@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rain</title>
 </head>
+
 <body>
-    
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.pexels.com/photos/803975/pexels-photo-803975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .rain {
+            width: 100vw;
+            height: 100vh;
+
+            background-image: url("/Images/rain.png");
+            /* background-repeat: no-repeat; */
+            animation-name: raining;
+            animation-duration: 0.4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes raining {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 10% 100%;
+            }
+        }
+    </style>
+
+    <div class="rain">
+
+    </div>
 </body>
+
 </html>
